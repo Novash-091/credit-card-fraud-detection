@@ -73,9 +73,8 @@ Raising the threshold cuts false alarms sharply but misses a few more frauds. Th
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/<Novash-0911>/<credit-card-fraud-detection>.git
-cd <credit-card-fraud-detection>
-
+git clone https://github.com/Novash-091/credit-card-fraud-detection.git
+cd credit-card-fraud-detection
 # 2. Create and activate a virtual environment (Windows PowerShell)
 python -m venv venv
 venv\Scripts\activate
@@ -95,16 +94,17 @@ jupyter notebook notebooks/01_eda.ipynb
 - [x] Baseline and XGBoost models
 - [x] Hyperparameter tuning (leak-free CV)
 - [x] Threshold optimization
-- [ ] Feature importance / SHAP explainability
+- [x] Feature importance / SHAP explainability
 - [ ] Compare more models (Random Forest, class-weight approach)
 - [ ] Move notebook code into `src/` scripts
-- [ ] Save final model in `models/`
+- [x] Save final model in `models/`
 - [ ] Optional: simple Streamlit demo
 
 
 ## Explainability
 
 I used XGBoost's built-in importance and SHAP values to understand which features drive predictions.
+![SHAP summary](images/shap_summary.png)
 
 - **V14** is the dominant feature, followed by **V4, V10, V12 and V8**.
 - Low values of V14, V10, V12 and V3 push the prediction towards fraud; high values of V4 and V11 do the same.
@@ -113,4 +113,4 @@ I used XGBoost's built-in importance and SHAP values to understand which feature
 
 ## Author
 
-<Novash Sharma> - [GitHub](https://github.com/<Novash-091>)
+Novash - [GitHub](https://github.com/Novash-091)
